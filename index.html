@@ -4,78 +4,166 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS handson 1</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./style.css">
-   
-    
 </head>
-<body> <div class="text">
-    <header id="head"> JAVASCRIPT</header>
-   
-        <h1>JS HANDS ON-1</h1>
-    1.You are provided with two numbers A and B. Your task is to add these two numbers? <br>
-   <pre> CODE: const AddTwoNumbers = (a,b) => {  
-        return a+b; 
-    }; </pre> <hr>
-    2.You are given two number first as A and second as Band check if both conditions (A<10 and A>B) are satisfied or not with the help of operators.
-    <pre> CODE:const Is_Valid = (a,b) =>{
-        return a<10 && a>b;
-        };
-       </pre> <hr>
-       3.You are given two numbers A and B. You need to do the following checks:
-       
-       if both are divisible by 10 console true. <br>
-       if both are not divisible by 10 console false. <br>
-       if one of them only is divisible by 10 console true. <br>
-       Use operator to do this. <br>
-       <pre>CODE:const Check = (A, B) => 
-        {
-           if(A%10===0&& B%10===0) {
-             return "true";
-           }
-           
-           else if(A%10===0||B%10===0) {
-             return "true";
-             }
-             else{return "false";
-            };
-          </pre> <hr>
-       4.Find the first digit of a 4 digit number? <br>
-       <pre>CODE:const First_Digit = (n) => {
-        var a=n/1000;
-        var b=parseInt(a);
-        return b;
-       };</pre> <hr>
-       5. Find the last digit of a 4 digit number? <br>
-       <pre>CODE:const Last_Digit = (n) => {
-        var a=n%10;
-        var b=parseInt(a);
-        return a;
-     };</pre> <hr>
-     6.Find the remainder? <br>
-     <pre>CODE:const Find_the_remainder = (a,b) => {
-        return b%a;
+<body>
+    <div id="main">
+        <header>JS HANDSON 2</header>
+    <div class="card">
+    1.Calculator
+       <pre> const Calculator = (A, B, C) => {
+	    switch(A){
+	    case "+":
+	        return (B+C)
+	        break;
+	    case "-":
+	        return (B-C)
+	        break;
+	    case "*":
+	        return (B*C)
+	        break;
+	    case "/":
+	        return (B/C)
+	        break;
+	    }
     };
-    </pre> <hr>
-    7.Multipy two Numbers? <br>
-    <pre>CODE:const Multiply_two_number = (a,b) => {
-        return a*b;
-    };
-    </pre> <hr>
-    8.Marks Calculator <br>
-    Shyam has got his marks in three subjects as A, B, and C(out of 100).Write a program to calculate his total marks and his average. <br>
-    <pre>CODE:const Sum = (A, B, C) => 
-        {
-         return A+B+C;
-        };
-        
-        const Average = (A, B, C) => 
-        {
-         return (A+B+C)/3;
-         
-        };</pre>
+</pre>
     </div>
+    <div class="card">
+
+    
+2.Check whether the condition is fulfilled or not?
+        <pre> const Check_divisibility = (N) => {
+            if(N%6===0 && N%9===0){
+              return "Divisible by both";
+            }
+            else{
+              return "Not Divisible by both";
+            }
+        }; 
+    </pre>
+</div>
+  <div class="card"> 
+3.Eligible Voter
+<pre>  const isEligible = (a) => {
+    if(a>=18){
+      return"Eligible for Voting"
+      
+    }
+    else{
+      return"Not Eligible for Voting"
+    }
+};
+    </pre>
+</div>
+    <div class="card">
+4.Find Relation
+<pre> const findRelation = (x,y) => {
+    if(x>y){
+      return(x + " is  greater than " + y)
+    }
+    else if( x< y){
+      return(x + " is smaller than " + y)
+      
+    }
+    else{
+      return(x + " is equal to "+ y)
+    }
+};
+
+</pre>
+</div>
+    </pre>
+   <div class="card">
+5.Find Grades
+<pre> const findGrades = (a) => {
+            if(50>=a && a>=41){
+              return "A";
+            }
+            else if(40>=a && a>=31){
+              return "B";
+            }
+            else if(30>=a && a>=21){
+              return "C";
+            }
+            else if(20>=a && a>=11){
+              return "D";
+            }
+            else if(10>=a){
+              return "E";
+            }
+        }; 
+    </pre>
+</div>
+    <div class="card">
+6.Get Value
+<pre>  const getValue = (a) => {
+            if(a==="P" || a=== "p"){
+              return "PrepBytes";
+            }
+            else if(a==="Z" || a=== "z"){
+              return "Zenith";
+            }
+            else if(a==="E" || a=== "e"){
+              return "Expert Coder";
+            }
+            else if(a==="D" || a==="d"){
+              return "Data Structure";
+            }
+        }; 
+    </pre>
+</div>
+    <div class="card">
+7.Find the maximum out of three numbers.
+<pre> const Max_out_of_three = (A,B,C) => {
+            if(A>B && A>C){
+                return A;
+            }
+            else if(B>C && B>A){
+                return B;
+            }
+            else if(C>A && C>B){
+                return C;
+            }
+            else if(A===B && B===C){
+                return -1;
+            }
+        };
+    </pre>
+</div>
+     <div class="card">       
+8.Second Smallest
+<pre>  const findSndSmallest = (x,y,z) => {
+  const findSndSmallest = (x,y,z) => {
+    if(x > y && z < y ||  x < y && z > y){
+      return y
+    }
+    else if ( x < y && z < x || x < z && z > x ){
+      return x
+    }
+    else{
+      return z
+    }
+    
+
+};
+    </pre> 
+</div>
+      <div class="card">      
+9.Check whether the triangle is Acute or Obtuse
+  <pre>  const Triangle_Check = (A,B,C) => {
+    if (A>90 || B>90 || C>90) {
+      return "obtuse"
+    }
+    else {
+      return "acute"
+    }
+   
+ };
+  </pre>
+</div>
+</div>
     
 </body>
-
 </html>
